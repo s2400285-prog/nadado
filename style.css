@@ -1,0 +1,1180 @@
+/* ==========================================
+   BASIC RESET
+========================================== */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: #020b12;
+
+  color: white;
+
+  font-family: Georgia, "Times New Roman", serif;
+
+  min-height: 100vh;
+}
+
+/* ==========================================
+   TOP NAVIGATION
+========================================== */
+
+.navbar {
+  position: fixed;
+
+  top: 0;
+  left: 0;
+
+  width: 100%;
+
+  height: 105px;
+
+  background: rgba(0, 5, 9, 0.97);
+
+  border-bottom: 1px solid rgba(214, 173, 66, 0.3);
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  padding: 0 35px;
+
+  z-index: 1000;
+}
+
+.nav-left,
+.nav-right {
+  display: flex;
+
+  align-items: center;
+
+  height: 100%;
+}
+
+.nav-left button,
+.nav-right button {
+  height: 100%;
+
+  padding: 0 25px;
+
+  background: transparent;
+
+  border: none;
+
+  border-right: 1px solid rgba(255, 255, 255, 0.12);
+
+  color: #eeeeee;
+
+  font-family: Georgia, "Times New Roman", serif;
+
+  font-size: 13px;
+
+  letter-spacing: 2px;
+
+  cursor: pointer;
+
+  transition: all 0.3s ease;
+}
+
+.nav-left button:first-child {
+  border-left: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+.nav-left button:hover,
+.nav-right button:hover {
+  color: #d6ad42;
+
+  background: rgba(214, 173, 66, 0.06);
+}
+
+/* ==========================================
+   CALL BUTTON
+========================================== */
+
+.call-button {
+  display: flex;
+
+  flex-direction: column;
+
+  justify-content: center;
+
+  align-items: center;
+
+  min-width: 190px;
+}
+
+.call-button span {
+  font-size: 10px;
+
+  letter-spacing: 2px;
+
+  color: #eeeeee;
+
+  margin-bottom: 6px;
+}
+
+.call-button strong {
+  color: #d6ad42;
+
+  font-size: 19px;
+
+  letter-spacing: 1px;
+}
+
+/* ==========================================
+   SECTIONS
+========================================== */
+
+.section {
+  display: none;
+}
+
+.section.active {
+  display: flex;
+}
+
+/* ==========================================
+   HERO
+========================================== */
+
+.hero {
+  min-height: 100vh;
+
+  padding-top: 105px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  gap: 70px;
+
+  position: relative;
+
+  overflow: hidden;
+
+  background: radial-gradient(
+    ellipse at 75% 60%,
+    #122f3c 0%,
+    #071821 45%,
+    #020b12 80%
+  );
+}
+
+.hero::before {
+  content: "";
+
+  position: absolute;
+
+  inset: 0;
+
+  background: linear-gradient(
+    145deg,
+    transparent 45%,
+    rgba(18, 48, 62, 0.4) 46%,
+    transparent 70%
+  );
+
+  pointer-events: none;
+}
+
+/* ==========================================
+   LAWYER PHOTO
+========================================== */
+
+.lawyer-photo {
+  width: 500px;
+
+  height: 675px;
+
+  position: relative;
+
+  z-index: 2;
+
+  overflow: hidden;
+}
+
+.lawyer-photo::after {
+  content: "";
+
+  position: absolute;
+
+  left: 0;
+  right: 0;
+  bottom: 0;
+
+  height: 35%;
+
+  background: linear-gradient(transparent, #020b12);
+
+  pointer-events: none;
+}
+
+.lawyer-photo img {
+  width: 100%;
+
+  height: 100%;
+
+  object-fit: cover;
+
+  object-position: center 15%;
+
+  display: block;
+}
+
+/* ==========================================
+   HERO CONTENT
+========================================== */
+
+.hero-content {
+  width: 650px;
+
+  position: relative;
+
+  z-index: 3;
+}
+
+.top-line {
+  width: 450px;
+
+  height: 1px;
+
+  background: rgba(255, 255, 255, 0.5);
+
+  margin-bottom: 25px;
+}
+
+.subtitle {
+  color: #d6ad42;
+
+  font-family: Arial, sans-serif;
+
+  font-size: 13px;
+
+  letter-spacing: 4px;
+
+  margin-bottom: 20px;
+}
+
+.hero h1 {
+  font-size: clamp(55px, 6vw, 88px);
+
+  font-weight: normal;
+
+  line-height: 0.95;
+
+  letter-spacing: 2px;
+}
+
+.hero h1 span {
+  display: block;
+
+  color: #d6ad42;
+}
+
+.hero h2 {
+  font-family: Arial, sans-serif;
+
+  font-size: 17px;
+
+  letter-spacing: 5px;
+
+  margin-top: 30px;
+}
+
+.hero-description {
+  margin-top: 35px;
+
+  max-width: 600px;
+
+  color: #c6c6c6;
+
+  font-family: Arial, sans-serif;
+
+  font-size: 16px;
+
+  line-height: 1.8;
+}
+
+/* ==========================================
+   HERO BUTTONS
+========================================== */
+
+.hero-buttons {
+  display: flex;
+
+  gap: 15px;
+
+  margin-top: 35px;
+}
+
+.light-button,
+.outline-button {
+  padding: 17px 25px;
+
+  cursor: pointer;
+
+  font-family: Arial, sans-serif;
+
+  font-weight: bold;
+
+  letter-spacing: 1px;
+
+  transition: 0.3s ease;
+}
+
+.light-button {
+  background: #f4f4f4;
+
+  color: #101c23;
+
+  border: none;
+}
+
+.light-button span,
+.outline-button span {
+  margin-left: 25px;
+}
+
+.light-button:hover {
+  background: #d6ad42;
+
+  color: white;
+
+  transform: translateY(-3px);
+}
+
+.outline-button {
+  background: transparent;
+
+  border: 1px solid rgba(255, 255, 255, 0.5);
+
+  color: white;
+}
+
+.outline-button:hover {
+  border-color: #d6ad42;
+
+  color: #d6ad42;
+
+  transform: translateY(-3px);
+}
+
+/* ==========================================
+   RIGHT SIDE CONTACT ATTORNEY
+========================================== */
+
+.side-contact {
+  position: fixed;
+
+  right: 0;
+
+  top: 50%;
+
+  transform: translateY(-50%);
+
+  z-index: 900;
+
+  background: #07517a;
+
+  color: white;
+
+  border: none;
+
+  padding: 25px 12px;
+
+  writing-mode: vertical-rl;
+
+  letter-spacing: 2px;
+
+  font-size: 13px;
+
+  cursor: pointer;
+
+  transition: 0.3s ease;
+}
+
+.side-contact:hover {
+  background: #d6ad42;
+
+  color: #111;
+}
+
+.side-contact span {
+  margin-bottom: 10px;
+}
+
+/* ==========================================
+   GENERAL PAGE
+========================================== */
+
+.page-section {
+  min-height: 100vh;
+
+  padding: 155px 8% 100px;
+
+  background: linear-gradient(#031018, #02090e);
+}
+
+.container {
+  max-width: 1150px;
+
+  width: 100%;
+
+  margin: auto;
+}
+
+.section-label {
+  color: #d6ad42;
+
+  font-family: Arial, sans-serif;
+
+  font-size: 13px;
+
+  letter-spacing: 4px;
+}
+
+.page-section h2 {
+  font-size: 55px;
+
+  font-weight: normal;
+
+  margin-top: 15px;
+}
+
+.gold-line {
+  width: 100px;
+
+  height: 2px;
+
+  background: #d6ad42;
+
+  margin: 25px 0 60px;
+}
+
+/* ==========================================
+   ABOUT
+========================================== */
+
+.about-grid {
+  display: grid;
+
+  grid-template-columns: 400px 1fr;
+
+  gap: 70px;
+
+  align-items: center;
+}
+
+.about-image img {
+  width: 100%;
+
+  height: 520px;
+
+  object-fit: cover;
+
+  object-position: center 15%;
+
+  display: block;
+
+  border: 1px solid rgba(214, 173, 66, 0.4);
+}
+
+.about-content h3 {
+  color: #d6ad42;
+
+  font-size: 30px;
+
+  margin-bottom: 25px;
+}
+
+.about-content > p {
+  color: #bdbdbd;
+
+  font-family: Arial, sans-serif;
+
+  line-height: 1.9;
+
+  margin-bottom: 20px;
+}
+
+.information-box {
+  border-left: 3px solid #d6ad42;
+
+  padding: 15px 20px;
+
+  background: rgba(255, 255, 255, 0.04);
+
+  margin-top: 20px;
+}
+
+.information-box strong {
+  color: #d6ad42;
+
+  font-family: Arial, sans-serif;
+
+  font-size: 11px;
+
+  letter-spacing: 2px;
+}
+
+.information-box p {
+  color: #ddd;
+
+  margin-top: 8px;
+
+  font-family: Arial, sans-serif;
+}
+
+/* ==========================================
+   EDUCATION TIMELINE
+========================================== */
+
+.timeline {
+  position: relative;
+
+  max-width: 900px;
+}
+
+.timeline::before {
+  content: "";
+
+  position: absolute;
+
+  left: 35px;
+
+  top: 0;
+
+  bottom: 0;
+
+  width: 1px;
+
+  background: #d6ad42;
+}
+
+.timeline-item {
+  display: flex;
+
+  gap: 40px;
+
+  margin-bottom: 45px;
+
+  position: relative;
+}
+
+.timeline-number {
+  width: 70px;
+
+  height: 70px;
+
+  min-width: 70px;
+
+  background: #07141c;
+
+  border: 1px solid #d6ad42;
+
+  color: #d6ad42;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  z-index: 2;
+}
+
+.timeline-item.highlight .timeline-number {
+  background: #d6ad42;
+
+  color: #111;
+}
+
+.timeline-content span {
+  color: #d6ad42;
+
+  font-family: Arial, sans-serif;
+
+  font-size: 11px;
+
+  letter-spacing: 3px;
+}
+
+.timeline-content h3 {
+  font-size: 27px;
+
+  margin-top: 10px;
+}
+
+.timeline-content p {
+  color: #aaa;
+
+  font-family: Arial, sans-serif;
+
+  line-height: 1.6;
+
+  margin-top: 8px;
+}
+
+/* ==========================================
+   ACHIEVEMENTS
+========================================== */
+
+.achievement-grid {
+  display: grid;
+
+  grid-template-columns: repeat(2, 1fr);
+
+  gap: 25px;
+}
+
+.achievement-card {
+  min-height: 330px;
+
+  padding: 40px 30px;
+
+  background: rgba(255, 255, 255, 0.035);
+
+  border: 1px solid rgba(255, 255, 255, 0.12);
+
+  transition: 0.3s ease;
+}
+
+.achievement-card:hover {
+  border-color: #d6ad42;
+
+  transform: translateY(-7px);
+}
+
+.achievement-icon {
+  font-size: 45px;
+
+  color: #d6ad42;
+
+  margin-bottom: 25px;
+}
+
+.achievement-card span {
+  color: #d6ad42;
+
+  font-family: Arial, sans-serif;
+
+  font-size: 11px;
+
+  letter-spacing: 3px;
+}
+
+.achievement-card h3 {
+  font-size: 25px;
+
+  margin: 15px 0;
+}
+
+.achievement-card p {
+  color: #aaa;
+
+  font-family: Arial, sans-serif;
+
+  line-height: 1.7;
+}
+
+.achievement-card button {
+  margin-top: 20px;
+
+  background: transparent;
+
+  border: none;
+
+  color: #d6ad42;
+
+  font-weight: bold;
+
+  cursor: pointer;
+
+  letter-spacing: 1px;
+}
+
+.achievement-card button:hover {
+  color: white;
+}
+
+/* ==========================================
+   COMMUNITY
+========================================== */
+
+.community-content {
+  display: grid;
+
+  grid-template-columns: 250px 1fr;
+
+  gap: 70px;
+
+  align-items: center;
+}
+
+.scout-symbol {
+  width: 220px;
+
+  height: 220px;
+
+  border: 1px solid #d6ad42;
+
+  border-radius: 50%;
+
+  display: flex;
+
+  justify-content: center;
+
+  align-items: center;
+
+  font-size: 100px;
+
+  color: #d6ad42;
+}
+
+.community-content h3 {
+  font-size: 35px;
+
+  margin-bottom: 20px;
+}
+
+.community-content p {
+  color: #aaa;
+
+  font-family: Arial, sans-serif;
+
+  line-height: 1.8;
+
+  margin-bottom: 20px;
+}
+
+.values {
+  display: flex;
+
+  gap: 15px;
+
+  margin-top: 30px;
+}
+
+.values div {
+  padding: 20px;
+
+  min-width: 120px;
+
+  text-align: center;
+
+  background: rgba(255, 255, 255, 0.04);
+
+  border: 1px solid rgba(214, 173, 66, 0.3);
+
+  font-family: Arial, sans-serif;
+
+  font-size: 12px;
+
+  letter-spacing: 1px;
+}
+
+.values strong {
+  display: block;
+
+  color: #d6ad42;
+
+  font-size: 22px;
+
+  margin-bottom: 8px;
+}
+
+/* ==========================================
+   CONTACT
+========================================== */
+
+.contact-grid {
+  display: grid;
+
+  grid-template-columns: repeat(2, 1fr);
+
+  gap: 25px;
+}
+
+.contact-card {
+  padding: 40px;
+
+  background: rgba(255, 255, 255, 0.035);
+
+  border: 1px solid rgba(255, 255, 255, 0.12);
+
+  transition: 0.3s ease;
+}
+
+.contact-card:hover {
+  border-color: #d6ad42;
+
+  transform: translateY(-5px);
+}
+
+.contact-icon {
+  font-size: 40px;
+
+  color: #d6ad42;
+}
+
+.contact-card h3 {
+  font-size: 25px;
+
+  margin: 20px 0 10px;
+}
+
+.contact-card p {
+  color: #aaa;
+
+  font-family: Arial, sans-serif;
+
+  line-height: 1.6;
+}
+
+.contact-card button {
+  margin-top: 25px;
+
+  padding: 12px 20px;
+
+  background: transparent;
+
+  border: 1px solid #d6ad42;
+
+  color: #d6ad42;
+
+  cursor: pointer;
+
+  transition: 0.3s;
+}
+
+.contact-card button:hover {
+  background: #d6ad42;
+
+  color: #111;
+}
+
+/* ==========================================
+   FOOTER
+========================================== */
+
+footer {
+  background: #020609;
+
+  border-top: 1px solid rgba(214, 173, 66, 0.3);
+
+  text-align: center;
+
+  padding: 60px 20px;
+}
+
+footer h3 {
+  color: #d6ad42;
+
+  letter-spacing: 3px;
+}
+
+footer p {
+  color: #777;
+
+  font-family: Arial, sans-serif;
+
+  margin-top: 10px;
+}
+
+.footer-links {
+  margin: 30px 0;
+}
+
+.footer-links button {
+  background: none;
+
+  border: none;
+
+  color: #aaa;
+
+  padding: 10px 15px;
+
+  cursor: pointer;
+}
+
+.footer-links button:hover {
+  color: #d6ad42;
+}
+
+.copyright {
+  font-size: 12px;
+}
+
+/* ==========================================
+   POPUP
+========================================== */
+
+.popup {
+  position: fixed;
+
+  inset: 0;
+
+  background: rgba(0, 0, 0, 0.85);
+
+  display: none;
+
+  align-items: center;
+
+  justify-content: center;
+
+  z-index: 5000;
+}
+
+.popup.show {
+  display: flex;
+}
+
+.popup-box {
+  width: 90%;
+
+  max-width: 550px;
+
+  background: #08131b;
+
+  border: 1px solid #d6ad42;
+
+  padding: 50px;
+
+  text-align: center;
+
+  position: relative;
+}
+
+.close-popup {
+  position: absolute;
+
+  right: 20px;
+
+  top: 10px;
+
+  border: none;
+
+  background: none;
+
+  color: white;
+
+  font-size: 30px;
+
+  cursor: pointer;
+}
+
+.popup-icon {
+  color: #d6ad42;
+
+  font-size: 55px;
+
+  margin-bottom: 20px;
+}
+
+.popup-box h2 {
+  font-size: 32px;
+
+  margin-bottom: 20px;
+}
+
+.popup-box p {
+  color: #aaa;
+
+  font-family: Arial, sans-serif;
+
+  line-height: 1.8;
+
+  margin-bottom: 25px;
+}
+
+.close-button {
+  padding: 12px 25px;
+
+  background: #d6ad42;
+
+  color: #111;
+
+  border: none;
+
+  cursor: pointer;
+
+  font-weight: bold;
+}
+
+/* ==========================================
+   TABLET
+========================================== */
+
+@media (max-width: 1100px) {
+  .navbar {
+    justify-content: center;
+  }
+
+  .nav-left,
+  .nav-right {
+    display: none;
+  }
+
+  .hero {
+    flex-direction: column;
+
+    text-align: center;
+
+    padding: 150px 30px 80px;
+  }
+
+  .lawyer-photo {
+    width: 420px;
+
+    height: 560px;
+
+    order: 2;
+  }
+
+  .hero-content {
+    width: 100%;
+
+    max-width: 700px;
+
+    order: 1;
+  }
+
+  .top-line {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .hero-buttons {
+    justify-content: center;
+  }
+
+  .about-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .achievement-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .contact-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .community-content {
+    grid-template-columns: 1fr;
+
+    text-align: center;
+  }
+
+  .scout-symbol {
+    margin: auto;
+  }
+
+  .values {
+    justify-content: center;
+  }
+}
+
+/* ==========================================
+   MOBILE
+========================================== */
+
+@media (max-width: 600px) {
+  .navbar {
+    height: 75px;
+  }
+
+  .hero {
+    padding-top: 100px;
+  }
+
+  .hero h1 {
+    font-size: 48px;
+  }
+
+  .hero h2 {
+    font-size: 12px;
+
+    letter-spacing: 3px;
+  }
+
+  .lawyer-photo {
+    width: 100%;
+
+    max-width: 360px;
+
+    height: 480px;
+  }
+
+  .hero-buttons {
+    flex-direction: column;
+  }
+
+  .light-button,
+  .outline-button {
+    width: 100%;
+  }
+
+  .side-contact {
+    display: none;
+  }
+
+  .page-section {
+    padding: 110px 6% 70px;
+  }
+
+  .page-section h2 {
+    font-size: 40px;
+  }
+
+  .about-image img {
+    height: 450px;
+  }
+
+  .timeline-item {
+    gap: 20px;
+  }
+
+  .timeline-number {
+    width: 55px;
+
+    min-width: 55px;
+
+    height: 55px;
+  }
+
+  .timeline::before {
+    left: 27px;
+  }
+
+  .timeline-content h3 {
+    font-size: 20px;
+  }
+
+  .values {
+    flex-direction: column;
+
+    align-items: center;
+  }
+
+  .contact-card {
+    padding: 30px 20px;
+  }
+
+  .footer-links button {
+    display: block;
+
+    margin: auto;
+  }
+}

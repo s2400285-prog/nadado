@@ -1,0 +1,486 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Atty. Renan A. Nadado | Attorney at Law</title>
+
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <!-- ==========================================
+     TOP NAVIGATION
+========================================== -->
+
+    <header class="navbar">
+      <!-- LEFT MENU -->
+
+      <nav class="nav-left">
+        <button onclick="showSection('about')">ABOUT</button>
+
+        <button onclick="showSection('education')">EDUCATION</button>
+
+        <button onclick="showSection('achievements')">ACHIEVEMENTS</button>
+      </nav>
+
+      <!-- RIGHT MENU -->
+
+      <nav class="nav-right">
+        <button onclick="showSection('community')">COMMUNITY</button>
+
+        <button onclick="showSection('contact')">CONTACT</button>
+
+        <button class="call-button" onclick="callAttorney()">
+          <span>CALL US TODAY</span>
+
+          <strong> 0976 130 0511 </strong>
+        </button>
+      </nav>
+    </header>
+
+    <!-- ==========================================
+     HERO
+========================================== -->
+
+    <section id="home" class="section hero active">
+      <!-- LAWYER PHOTO -->
+
+      <div class="lawyer-photo">
+        <img src="renan.jpg" alt="Atty. Renan A. Nadado" />
+      </div>
+
+      <!-- HERO TEXT -->
+
+      <div class="hero-content">
+        <div class="top-line"></div>
+
+        <p class="subtitle">ATTORNEY • LEGAL PROFESSIONAL</p>
+
+        <h1>
+          ATTY. RENAN
+          <span>A. NADADO</span>
+        </h1>
+
+        <h2>JUSTICE • INTEGRITY • SERVICE</h2>
+
+        <p class="hero-description">
+          A dedicated legal professional committed to serving others through
+          knowledge, integrity, leadership, and the pursuit of justice.
+        </p>
+
+        <div class="hero-buttons">
+          <button class="light-button" onclick="showSection('about')">
+            ABOUT ATTORNEY
+            <span>→</span>
+          </button>
+
+          <button class="outline-button" onclick="showSection('contact')">
+            CONTACT
+            <span>→</span>
+          </button>
+        </div>
+      </div>
+
+      <!-- RIGHT SIDE CONTACT BUTTON -->
+
+      <button class="side-contact" onclick="showSection('contact')">
+        <span>✉</span>
+
+        CONTACT ATTORNEY
+      </button>
+    </section>
+
+    <!-- ==========================================
+     ABOUT
+========================================== -->
+
+    <section id="about" class="section page-section">
+      <div class="container">
+        <p class="section-label">ABOUT THE ATTORNEY</p>
+
+        <h2>Atty. Renan A. Nadado</h2>
+
+        <div class="gold-line"></div>
+
+        <div class="about-grid">
+          <div class="about-image">
+            <img src="renan.jpg" alt="Atty. Renan A. Nadado" />
+          </div>
+
+          <div class="about-content">
+            <h3>Attorney at Law</h3>
+
+            <p>
+              Atty. Renan A. Nado is a legal professional based in Bacolod City,
+              Negros Occidental.
+            </p>
+
+            <p>
+              He completed his elementary education at Dona Emilia Jaime Garcia
+              Elementary School and his secondary education at Negros Occidental
+              High School.
+            </p>
+
+            <p>
+              He continued his studies at La Salle Bacolod, earning a degree in
+              Bachelor of Secondary Education major in Mathematics.
+            </p>
+
+            <p>
+              He later pursued legal education at the University of Recoletos
+              Bacolod and successfully passed the Bar Examination in 2023.
+            </p>
+
+            <div class="information-box">
+              <strong> LOCATION </strong>
+
+              <p>Bacolod City, Negros Occidental, Philippines</p>
+            </div>
+
+            <div class="information-box">
+              <strong> PROFESSION </strong>
+
+              <p>Attorney at Law</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================
+     EDUCATION
+========================================== -->
+
+    <section id="education" class="section page-section">
+      <div class="container">
+        <p class="section-label">ACADEMIC BACKGROUND</p>
+
+        <h2>Education</h2>
+
+        <div class="gold-line"></div>
+
+        <div class="timeline">
+          <!-- 1 -->
+
+          <div class="timeline-item">
+            <div class="timeline-number">01</div>
+
+            <div class="timeline-content">
+              <span> ELEMENTARY </span>
+
+              <h3>Dona Emilia Jaime Garcia Elementary School</h3>
+
+              <p>Elementary Education</p>
+            </div>
+          </div>
+
+          <!-- 2 -->
+
+          <div class="timeline-item">
+            <div class="timeline-number">02</div>
+
+            <div class="timeline-content">
+              <span> HIGH SCHOOL </span>
+
+              <h3>Negros Occidental High School</h3>
+
+              <p>Secondary Education</p>
+            </div>
+          </div>
+
+          <!-- 3 -->
+
+          <div class="timeline-item">
+            <div class="timeline-number">03</div>
+
+            <div class="timeline-content">
+              <span> COLLEGE </span>
+
+              <h3>La Salle Bacolod</h3>
+
+              <p>Bachelor of Secondary Education Major in Mathematics</p>
+            </div>
+          </div>
+
+          <!-- 4 -->
+
+          <div class="timeline-item">
+            <div class="timeline-number">04</div>
+
+            <div class="timeline-content">
+              <span> LAW SCHOOL </span>
+
+              <h3>University of Recoletos Bacolod</h3>
+
+              <p>Juris Doctor</p>
+            </div>
+          </div>
+
+          <!-- 5 -->
+
+          <div class="timeline-item highlight">
+            <div class="timeline-number">05</div>
+
+            <div class="timeline-content">
+              <span> 2023 </span>
+
+              <h3>Philippine Bar Examination</h3>
+
+              <p>Successfully passed the Philippine Bar Examination in 2023.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================
+     ACHIEVEMENTS
+========================================== -->
+
+    <section id="achievements" class="section page-section">
+      <div class="container">
+        <p class="section-label">PROFESSIONAL MILESTONES</p>
+
+        <h2>Achievements</h2>
+
+        <div class="gold-line"></div>
+
+        <div class="achievement-grid">
+          <!-- BAR -->
+
+          <div class="achievement-card">
+            <div class="achievement-icon">⚖</div>
+
+            <span> 2023 </span>
+
+            <h3>Philippine Bar Examination</h3>
+
+            <p>Successfully passed the Philippine Bar Examination in 2023.</p>
+
+            <button onclick="openAchievement('bar')">VIEW DETAILS →</button>
+          </div>
+
+          <!-- JURIS DOCTOR -->
+
+          <div class="achievement-card">
+            <div class="achievement-icon">🎓</div>
+
+            <span> LAW </span>
+
+            <h3>Juris Doctor</h3>
+
+            <p>
+              Completed legal education at the University of Recoletos Bacolod.
+            </p>
+
+            <button onclick="openAchievement('juris')">VIEW DETAILS →</button>
+          </div>
+
+          <!-- CESWE -->
+
+          <div class="achievement-card">
+            <div class="achievement-icon">★</div>
+
+            <span> QUALIFICATION </span>
+
+            <h3>CESWE</h3>
+
+            <p>
+              CESWE is included among the professional qualifications provided
+              for Atty. Renan A. Nadado.
+            </p>
+
+            <button onclick="openAchievement('ceswe')">VIEW DETAILS →</button>
+          </div>
+
+          <!-- BSP -->
+
+          <div class="achievement-card">
+            <div class="achievement-icon">⚜</div>
+
+            <span> COMMUNITY </span>
+
+            <h3>BSP Training Team Member</h3>
+
+            <p>
+              Training Team Member of the Boy Scouts of the Philippines - Negros
+              Occidental Council.
+            </p>
+
+            <button onclick="showSection('community')">VIEW COMMUNITY →</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================
+     COMMUNITY
+========================================== -->
+
+    <section id="community" class="section page-section">
+      <div class="container">
+        <p class="section-label">COMMUNITY & LEADERSHIP</p>
+
+        <h2>Boy Scouts of the Philippines</h2>
+
+        <div class="gold-line"></div>
+
+        <div class="community-content">
+          <div class="scout-symbol">⚜</div>
+
+          <div>
+            <h3>Training Team Member</h3>
+
+            <p>
+              Atty. Renan A. Nadado is a
+              <strong> Training Team Member (TTM) </strong>
+              of the Boy Scouts of the Philippines in the Negros Occidental
+              Council.
+            </p>
+
+            <p>
+              His involvement reflects his participation in leadership,
+              training, service, and community development.
+            </p>
+
+            <div class="values">
+              <div>
+                <strong>01</strong>
+                LEADERSHIP
+              </div>
+
+              <div>
+                <strong>02</strong>
+                SERVICE
+              </div>
+
+              <div>
+                <strong>03</strong>
+                TRAINING
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================
+     CONTACT
+========================================== -->
+
+    <section id="contact" class="section page-section">
+      <div class="container">
+        <p class="section-label">GET IN TOUCH</p>
+
+        <h2>Contact Attorney</h2>
+
+        <div class="gold-line"></div>
+
+        <div class="contact-grid">
+          <!-- PHONE -->
+
+          <div class="contact-card">
+            <div class="contact-icon">☎</div>
+
+            <h3>Phone</h3>
+
+            <p>0976 130 0511</p>
+
+            <button onclick="callAttorney()">CALL NOW →</button>
+          </div>
+
+          <!-- EMAIL -->
+
+          <div class="contact-card">
+            <div class="contact-icon">✉</div>
+
+            <h3>Email</h3>
+
+            <p>renannadado@gmail.com</p>
+
+            <button onclick="emailAttorney()">SEND EMAIL →</button>
+          </div>
+
+          <!-- ADDRESS -->
+
+          <div class="contact-card">
+            <div class="contact-icon">📍</div>
+
+            <h3>Address</h3>
+
+            <p>Bacolod City, Negros Occidental, Philippines</p>
+
+            <button onclick="openMap()">VIEW MAP →</button>
+          </div>
+
+          <!-- PROFILE -->
+
+          <div class="contact-card">
+            <div class="contact-icon">⚖</div>
+
+            <h3>Attorney</h3>
+
+            <p>
+              Atty. Renan A. Nadado
+              <br />
+              Attorney at Law
+            </p>
+
+            <button onclick="showSection('about')">VIEW PROFILE →</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================
+     FOOTER
+========================================== -->
+
+    <footer>
+      <h3>ATTY. RENAN A. NADADO</h3>
+
+      <p>Attorney at Law</p>
+
+      <div class="footer-links">
+        <button onclick="showSection('home')">HOME</button>
+
+        <button onclick="showSection('about')">ABOUT</button>
+
+        <button onclick="showSection('education')">EDUCATION</button>
+
+        <button onclick="showSection('achievements')">ACHIEVEMENTS</button>
+
+        <button onclick="showSection('community')">COMMUNITY</button>
+
+        <button onclick="showSection('contact')">CONTACT</button>
+      </div>
+
+      <p class="copyright">
+        © 2026 Atty. Renan A. Nadado. All Rights Reserved.
+      </p>
+    </footer>
+
+    <!-- ==========================================
+     ACHIEVEMENT POPUP
+========================================== -->
+
+    <div id="popup" class="popup">
+      <div class="popup-box">
+        <button class="close-popup" onclick="closePopup()">×</button>
+
+        <div id="popup-icon" class="popup-icon">⚖</div>
+
+        <h2 id="popup-title">Achievement</h2>
+
+        <p id="popup-text">Achievement information.</p>
+
+        <button class="close-button" onclick="closePopup()">CLOSE</button>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
